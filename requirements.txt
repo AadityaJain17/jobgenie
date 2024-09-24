@@ -1,0 +1,10 @@
+streamlit
+pillow
+langchain-core
+langchain
+langchain-openai
+langchain-google-genai
+python-dotenv
+PyPDF2
+google.generativeai
+python-dotenv
