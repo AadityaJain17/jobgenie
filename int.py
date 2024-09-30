@@ -33,7 +33,7 @@ def openai_tts(text, model="tts-1", voice="alloy"):
     )
 
 def main():
-    st.title("Interview Simulator")
+    st.subheader("Interview Simulator")
 
     if 'interview_state' not in st.session_state:
         st.session_state.interview_state = False
@@ -41,7 +41,7 @@ def main():
     if 'messages' not in st.session_state:
         interview_name = st.text_input('What is your name?')
         interview_position = st.text_input('What role are you applying for?')
-        selected_value = st.slider('Choose Interview Difficulty', min_value=0, max_value=10, step=1, value=5)
+        #selected_value = st.slider('Choose Interview Difficulty', min_value=0, max_value=10, step=1, value=5)
         if st.button('Start Interview'):
             interview_prompt = f'user want you to act as an interviewer. user will be the candidate and you will ask user the interview questions for the {interview_position} position. My first sentence is "Hi"'
             message_list = [
@@ -93,7 +93,4 @@ def main():
                 file_name='Interview.txt',
                 mime='text/plain'
             )
-
-
-if __name__ == '__main__':
-    main()
+main()
